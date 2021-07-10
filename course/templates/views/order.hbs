@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Order</title>
+</head>
+<body>
+  <header>
+    <a class="logo">Курсовая</a>
+    <nav id="nav">
+      <p><a href="/">Заказы</a></p>
+      <p><a href="/teachers">Преподаватели</a></p>
+      <p><a href="/loginPage">Войти</a></p>
+      <p><a href="/register">Регистрация</a></p>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Сделать заказ на редактуру текста</h1>
+    
+    <form action="/createOrder" method="POST">
+      <label for="text_title">Название текста</label>
+      <input type="text" name="text_title" id="text_title" placeholder="Название"> 
+      <label for="text">Сам текст</label>
+      <textarea type="text" name="text" id="text" placeholder="Жил да был..."> </textarea>
+      <input type="hidden" id="user_id_input" name="user_id">
+      <input type="submit" value="Создать">
+    </form>
+    
+    <h2>Заказы</h2>
+    <table id="orders-table">
+      <tr>
+        <th>Рекомендации</th>
+        <th>Преподаватель</th>
+        <th>Ученик</th>
+      </tr>
+    </table>
+    
+  </main>
+  
+  <script src="js/script.js"></script>
+  <script src="js/order.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+</html>

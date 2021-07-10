@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Admin</title>
+</head>
+<body>
+  <header>
+    <a class="logo">Курсовая</a>
+    <nav id="nav">
+      <p><a href="/">Заказы</a></p>
+      <p><a href="/teachers">преподователи</a></p>
+      <p><a href="/loginPage">Войти</a></p>
+      <p><a href="/register">Регистрация</a></p>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Если в вашу компанию устроился новый преподаватель добавьте его с помощью формы ниже</h1>
+    {{!-- username: req.body.username,
+    password: req.body.password,
+    name: req.body.name --}}
+    <form action="/createTeacherAndOffice" method="POST">
+      <label for="username">Имя</label>
+      <input type="text" name="username" id="username" placeholder="Александр"> 
+      <label for="office_model">Название кабинета</label>
+      <input type="text" name="office_model" id="office_model" placeholder="Название кабинета"> 
+      <label for="office_number">Номер кабинета</label>
+      <input type="text" name="office_number" id="office_number" placeholder="Номер кабинета"> 
+      <input type="submit" value="Добавить">
+    </form>
+    
+    <h2>Изменить данные какого-то из преподователей</h2>
+    
+    <form action="/updateTeacherAndOffice" method="POST">
+      <select name="id" id="teacher_id"></select>
+      <label for="username">Имя</label>
+      <input type="text" name="username" id="username" placeholder="Александр"> 
+      <label for="office_model">Название кабинета</label>
+      <input type="text" name="office_model" id="office_model" placeholder="Название кабинета"> 
+      <label for="office_number">Номер кабинета</label>
+      <input type="text" name="office_number" id="office_number" placeholder="Номер кабинета"> 
+      <input type="submit" value="Добавить">
+    </form>
+    
+    <h2>Удалить преподавателя</h2>
+    <form action="/deleteTeacherAndOffice" method="POST">
+      <select name="id" id="teacher_id_delete"></select>
+      <input type="submit" value="Удалить">
+    </form>
+    
+    <h2>Список преподователей</h2>
+    
+    <table id="orders-table">
+      <tr>
+        <th>Преподаватель</th>
+        <th>Кабинет</th>
+        <th>Занят</th>
+      </tr>
+    </table>
+    
+  </main>
+  
+  <script src="js/script.js"></script>
+  <script src="/js/teachers.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

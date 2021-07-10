@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Login</title>
+</head>
+<body>
+  <header>
+    <a class="logo">Курсовая</a>
+    <nav id="nav">
+      <p><a href="/">Заказы</a></p>
+      <p><a href="/teachers">Преподаватели</a></p>
+      <p><a href="/loginPage">Войти</a></p>
+      <p><a href="/register">Регистрация</a></p>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Вход</h1>
+    
+    <form action="/login" method="POST">
+      <label for="username">Имя</label>
+      <input type="text" name="username" id="username" placeholder="Имя"> 
+      <label for="password">Пароль</label>
+      <input type="password" name="password" id="password" placeholder="Пароль"> 
+      <input type="submit" value="Войти">
+    </form>
+    
+  </main>
+  
+  <script>
+    if ('{{username}}' && '{{user_id}}') {
+      localStorage.setItem('username', '{{username}}');
+      localStorage.setItem('user_id', '{{user_id}}');
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

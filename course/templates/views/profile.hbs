@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Profile</title>
+</head>
+<body>
+  <header>
+    <a class="logo">Курсовая</a>
+    <nav id="nav">
+      <p><a href="/">Заказы</a></p>
+      <p><a href="/teachers">Преподаватели</a></p>
+      <p><a href="/loginPage">Войти</a></p>
+      <p><a href="/register">Регистрация</a></p>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Профиль</h1>
+    
+    <div class="profile">
+      <div class="photo"></div>
+      <div class="description">
+        <p>Имя: <span id="username">%username%</span></p>
+        <p>Ваш номер пользователя: <span id="user_id">%user_id%</span></p>
+      </div>
+    </div>
+    
+    <div class="make-order-wrap">
+      <a href="/order">Сделать заказ</a>
+    </div>
+    
+    
+  </main>
+  
+  <script src="js/script.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
